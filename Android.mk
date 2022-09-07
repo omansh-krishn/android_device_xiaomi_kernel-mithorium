@@ -1,0 +1,14 @@
+LOCAL_PATH := $(call my-dir)
+
+ifneq ($(filter MiThoriumSSI Mi8937 Mi439 Tiare oxygen uter vince,$(TARGET_DEVICE)),)
+
+KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/
+KERNEL_HEADERS_INSTALL := $(KERNEL_OUT)/usr
+
+$(KERNEL_OUT):
+	mkdir -p $(KERNEL_OUT)
+
+$(KERNEL_HEADERS_INSTALL): $(KERNEL_OUT)
+	cp -Rf $(LOCAL_PATH)/$(TARGET_DEVICE)/kernel_headers $(KERNEL_HEADERS_INSTALL)
+
+endif
