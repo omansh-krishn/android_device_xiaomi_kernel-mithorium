@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter MiThoriumSSI Mi8937 Mi439 Tiare oxygen uter vince,$(TARGET_DEVICE)),)
+ifneq ($(filter MiThoriumSSI Mi8937 Mi8937_4_19 Mi439 Mi439_4_19 Tiare oxygen uter vince onc,$(TARGET_DEVICE)),)
 
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/
 KERNEL_HEADERS_INSTALL := $(KERNEL_OUT)/usr
